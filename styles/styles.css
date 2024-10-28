@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Dark Theme Colors */
+:root {
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --primary-color: #007acc;
+    --secondary-color: #005f99;
+    --button-bg-color: #333333;
+    --button-hover-color: #555555;
+    --footer-bg-color: #2a2a2a;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+button, .btn {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
