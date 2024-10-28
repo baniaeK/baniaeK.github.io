@@ -4,7 +4,8 @@
 :root {
     --background-color: #1e1e1e;
     --text-color: #e0e0e0;
-    --heading-color: #ffffff;
+    
+    --heading-color: #B69F66;
     --primary-color: #007acc;
     --secondary-color: #005f99;
     --button-bg-color: #333333;
@@ -30,7 +31,7 @@ h1 {
 }
 h2 {
     color: var(--heading-color);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 800;
     margin-bottom: 1rem;
     text-align: center;
@@ -57,7 +58,7 @@ h4 {
 p {
     color: var(--heading-color);
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 100;
     margin-bottom: 1rem;
     text-align: center;
    /* position:relative;
