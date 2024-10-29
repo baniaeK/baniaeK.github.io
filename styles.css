@@ -4,7 +4,6 @@
 :root {
     --background-color: #1e1e1e;
     --text-color: #e0e0e0;
-    
     --heading-color: #B69F66;
     --primary-color: #007acc;
     --secondary-color: #005f99;
@@ -13,104 +12,140 @@
     --footer-bg-color: #2a2a2a;
 }
 
-body {
+body, html {
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.2;
-    padding: 1rem;
-}
-
-.full-screen-section {
-    height: 100vh; /* Full viewport height */
-    display: flex;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    margin: 0;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 2rem; /* Padding for mobile viewing */
 }
 
-button {
-    background-color: #333; /* Dark button background */
-    color:  #B69F66; /* Gold text color */
+/* Main container to stack sections vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Full-Screen Section Styling */
+.full-screen-section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+#title-section {
+    background-color: var(--background-color);
+}
+
+#nominations {
+    background-color: #1c1c1c; /* Slightly different background for distinction */
+}
+
+/* Title Styling */
+h1 {
+    color: var(--heading-color);
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h4 {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.5rem 0; /* Add space between nominations */
+    text-align: center;
+}
+
+/* Button Styling */
+button, .btn {
+    background-color: var(--button-bg-color);
+    color: var(--heading-color); /* Gold text color */
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    border: 2px solid #B69F66; /* Gold border */
+    border: 2px solid var(--heading-color); /* Gold border */
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 1rem;
 }
-button:hover {
-    background-color: #B69F66; /* Change background on hover */
-    color: #121212; /* Dark text color on hover */
-    transform: scale(1.05); /* Slightly grow the button on hover */
-}
-
-h1 {
-    color: var(--heading-color);
-    font-size: 80px;
-    font-weight: 1200;
-    margin-bottom: 1rem;
-    text-align: center;
-    
-}
-h2 {
-    color: var(--heading-color);
-    font-size: 50px;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-align: center;
-  /*  position:relative;
-    left: 20%;*/
-}
-h3 {
-    color: var(--heading-color);
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-    /*position:relative;
-    left: 20%;*/
-}
-h4 {
-    color: var(--heading-color);
-    font-size: 20px;
-    font-weight: 200;
-    margin-bottom: 1rem;
-    position:relative;
-    text-align: center;
-}
-p {
-    color: var(--heading-color);
-    font-size: 20px;
-    font-weight: 100;
-    margin-bottom: 1rem;
-    text-align: center;
-   /* position:relative;
-    left: 20%;*/
-}
-
-button, .btn {
-    background-color: var(--button-bg-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 button:hover, .btn:hover {
     background-color: var(--button-hover-color);
+    color: var(--background-color); /* Dark text color on hover */
+    transform: scale(1.05); /* Slightly grow the button on hover */
 }
 
+/* Footer Styling */
 footer {
     background-color: var(--footer-bg-color);
     color: var(--text-color);
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin-top: auto; /* Pushes footer to the bottom of the viewport */
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    button, .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }
