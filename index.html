@@ -14,7 +14,13 @@
     <div class="full-screen-section" id="title-section">
         <header>
             <h1><b>Złote Gołty</b></h1>
-            <button onclick="scrollToNominations()">Nominacje</button>
+            <h6>12.2024</h6>
+            <div class="button-container">
+                <button onclick="scrollToNominations()">Nominacje</button>
+                <button onclick="scrollToHistory()">Historia</button>
+            </div>
+            
+            &nbsp
         </header>
     </div>
 
@@ -85,6 +91,12 @@
         &nbsp
 
     </div>
+    &nbsp
+    <div class="full-screen-section2" id="history">
+        <h2>Historia</h2>
+        <p><b>Złote Gołty</b> powstały dzięki nieskończonej kreatywności Aleksandra Skwarka, Jakuba Bańkowskiego, Franciszka Bilskiego, Piotra Bawora</p>
+        <p>oraz sponsora projektu i założyciela firmy <b>Masior Enterprises</b> - Oliviera Lubasa.</p>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -95,6 +107,9 @@
         // JavaScript function to scroll smoothly to the nominations section
         function scrollToNominations() {
             document.getElementById('nominations').scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToHistory() {
+            document.getElementById('history').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 
