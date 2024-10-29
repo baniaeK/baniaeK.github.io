@@ -21,6 +21,33 @@ body {
     padding: 1rem;
 }
 
+.full-screen-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem; /* Padding for mobile viewing */
+}
+
+button {
+    background-color: #333; /* Dark button background */
+    color:  #B69F66; /* Gold text color */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #B69F66; /* Gold border */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+button:hover {
+    background-color: #B69F66; /* Change background on hover */
+    color: #121212; /* Dark text color on hover */
+    transform: scale(1.05); /* Slightly grow the button on hover */
+}
+
 h1 {
     color: var(--heading-color);
     font-size: 80px;
