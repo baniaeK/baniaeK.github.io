@@ -13,6 +13,8 @@
     <!-- Title Section -->
     <div class="full-screen-section" id="title-section">
         <header>
+          <!--  <img src="zlotegolty.png" alt="Złote Gołty Logo" class="logo-image" width="300"-->
+           <!-- height="300">-->
             <h1><b>Złote Gołty</b></h1>
             <h6>12.2024</h6>
             <div class="button-container">
@@ -100,10 +102,46 @@
 
     </div>
     &nbsp
+    
     <div class="full-screen-section2" id="history">
         <h2>Historia</h2>
         <p><b>Złote Gołty</b> powstały dzięki nieskończonej kreatywności Aleksandra Skwarka, Jakuba Bańkowskiego, Franciszka Bilskiego, Piotra Bawora</p>
         <p>oraz sponsora projektu i założyciela firmy <b>Masior Enterprises</b> - Oliviera Lubasa.</p>
+    </div>
+
+    <div class = "full-screen-section" id = "form-section">
+        <h2>Nominuj swojego kandydata!</h2>
+        <form id="suggestion-form" action="https://formspree.io/f/mzzbeylv" method="POST">
+
+            <label for="name">Twoje imię:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="category">Kategoria:</label>
+            <select id="category" name="category" required onchange="toggleFileUpload()">
+                <option value="" disabled selected>Wybierz kategorię</option>
+                <option value="tekst-roku">Tekst Roku</option>
+                <option value="nick-roku">Nick Roku</option>
+                <option value="przekret-roku">Przekręt Roku</option>
+                <option value="event-roku">Event Roku</option>
+                <option value="event-szkolny-roku">Event Szkolny Roku</option>
+                <option value="beef-roku">Beef Roku</option>
+                <option value="para-roku">Para Roku</option>
+                <option value="zdjecie-roku">Zdjęcie Roku</option>
+                <!-- Add more categories as needed -->
+            </select>
+        
+            <label for="suggestion">Sugestia:</label>
+            <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+        
+            <div id="file-upload-container" style="display: none;">
+                <label for="file">Upload Image/Video:</label>
+                <input type="file" id="file" name="file" accept="image/*,video/*">
+            </div>
+
+            <button type="submit">Wyślij</button>
+        </form>
+
+        
     </div>
 
     <!-- Footer -->
@@ -118,6 +156,26 @@
         }
         function scrollToHistory() {
             document.getElementById('history').scrollIntoView({ behavior: 'smooth' });
+        }
+        function toggleFileUpload() {
+            const category = document.getElementById('category').value;
+            const fileUploadContainer = document.getElementById('file-upload-container');
+            const suggestionField = document.getElementById('suggestion');
+            const suggestionLabel = document.getElementById('suggestion-label');
+
+            if (category === 'zdjecie-roku') {
+                // Show file upload for "Zdjęcie Roku"
+                fileUploadContainer.style.display = 'block';
+                suggestionField.required = false; // Make the text suggestion optional
+                suggestionLabel.style.display = 'none'; // Hide the suggestion field label
+                suggestionField.style.display = 'none'; // Hide the suggestion field
+            } else {
+                // Show text suggestion for other categories
+                fileUploadContainer.style.display = 'none';
+                suggestionField.required = true;
+                suggestionLabel.style.display = 'block';
+                suggestionField.style.display = 'block';
+            }
         }
     </script>
 
