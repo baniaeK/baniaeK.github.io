@@ -224,7 +224,7 @@ footer {
         margin-bottom: 5px; /* Add space below logo to avoid overlap */
     }
     .spacer {
-        height: 30px; /* Reduce spacer height on smaller screens */
+        height: 80px; /* Reduce spacer height on smaller screens */
     }
     .headline {
         font-size: 1.8em; /* Decrease headline font size */
