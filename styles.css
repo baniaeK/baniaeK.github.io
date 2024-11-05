@@ -36,6 +36,7 @@ body, html {
 .spacer {
     height: 100px; /* Adjust this to control vertical space below the header content */
 }
+
 /* Logo styling */
 .logo {
     pointer-events: none;
@@ -224,5 +225,14 @@ footer {
     }
     .spacer {
         height: 30px; /* Reduce spacer height on smaller screens */
+    }
+    .headline {
+        font-size: 1.8em; /* Decrease headline font size */
+        margin-top: 5px;
+    }
+
+    .subtitle {
+        font-size: 1em; /* Decrease subtitle font size */
+        margin-top: 2px;
     }
 }
