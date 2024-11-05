@@ -218,4 +218,11 @@ footer {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
+    .logo {
+        width: 100px; /* Reduce logo size on mobile */
+        margin-bottom: 5px; /* Add space below logo to avoid overlap */
+    }
+    .spacer {
+        height: 30px; /* Reduce spacer height on smaller screens */
+    }
 }
