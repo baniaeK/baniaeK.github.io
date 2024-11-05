@@ -220,7 +220,7 @@ footer {
         font-size: 1.6rem;
     }
     .logo {
-        width: 240px; /* Reduce logo size on mobile */
+        width: 180px; /* Reduce logo size on mobile */
         margin-bottom: 2px; /* Add space below logo to avoid overlap */
     }
     .spacer {
