@@ -220,19 +220,19 @@ footer {
         font-size: 1.6rem;
     }
     .logo {
-        width: 150px; /* Reduce logo size on mobile */
+        width: 180px; /* Reduce logo size on mobile */
         margin-bottom: 5px; /* Add space below logo to avoid overlap */
     }
     .spacer {
-        height: 60px; /* Reduce spacer height on smaller screens */
+        height: 60px;
     }
     .headline {
-        font-size: 3em; /* Decrease headline font size */
+        font-size: 5em; /* Decrease headline font size */
         margin-top: 5px;
     }
 
     .subtitle {
-        font-size: 1.4em; /* Decrease subtitle font size */
+        font-size: 2.5em; /* Decrease subtitle font size */
         margin-top: 2px;
     }
 }
