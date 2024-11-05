@@ -34,12 +34,12 @@ body, html {
     align-items: center;
 }
 .spacer {
-    height: 50px; /* Adjust this to control vertical space below the header content */
+    height: 100px; /* Adjust this to control vertical space below the header content */
 }
 /* Logo styling */
 .logo {
     pointer-events: none;
-    width: 200px; /* Set your desired width */
+    width: 250px; /* Set your desired width */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: -100px; /* Adjust this to control the gap between the logo and the headline */
 }
