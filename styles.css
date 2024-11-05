@@ -27,6 +27,22 @@ body, html {
     align-items: center;
 }
 
+.title-container {
+    text-align: center; /* Center-align the logo and headline */
+    display: flex;
+    flex-direction: column; /* Stack logo on top of the headline */
+    align-items: center;
+}
+.spacer {
+    height: 50px; /* Adjust this to control vertical space below the header content */
+}
+/* Logo styling */
+.logo {
+    pointer-events: none;
+    width: 200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: -100px; /* Adjust this to control the gap between the logo and the headline */
+}
 
 
 /* Main container to stack sections vertically */
